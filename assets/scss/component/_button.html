@@ -1,0 +1,43 @@
+.ic-btn {
+  height: 48px;
+  @include d-flex();
+  @include align-center;
+  @include bd-radius(8px);
+  padding: 0px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: $color-primary;
+  border-radius: 4px;
+  color: $color-white;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  i {
+    transform: rotate(315deg);
+    transition: all 0.3s;
+  }
+  &.btn-orange {
+    background: $color-orange;
+  }
+  &.btn-outline {
+    border-radius: 8px;
+    border: 1px solid var(--Border, #e7e6e6);
+    background: white;
+    color: $color-black;
+
+    &:hover {
+      border: 1px solid $color-primary;
+      background: $color-primary;
+      color: white;
+    }
+  }
+  &:hover {
+    border: 1px solid var(--Border, #e7e6e6);
+    background: white;
+    color: $color-black;
+    i {
+      transform: rotate(360deg);
+    }
+    
+  }
+}

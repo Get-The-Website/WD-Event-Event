@@ -1,0 +1,171 @@
+// form style
+form {
+  .ic-form-label {
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 8px;
+    @media #{$max575} {
+      line-height: normal;
+    }
+  }
+  .ic-form-control {
+    border-radius: 4px;
+    border: 1px solid var(--Border, #e9e9e9);
+    background: var(--White, #fff);
+    height: 55px;
+    padding: 0px 15px;
+    &::placeholder {
+      color: #6b7483;
+    }
+  }
+  .ic-form-group {
+    margin-bottom: 30px;
+    @media #{$max991} {
+      margin-bottom: 20px;
+    }
+    @media #{$max767} {
+      margin-bottom: 15px;
+    }
+    @media #{$max575} {
+      margin-bottom: 10px;
+    }
+  }
+  .ic-text-area {
+    height: 122px;
+    padding: 34px 20px;
+    border-radius: 6px;
+    border: 1px solid #e9e9e9;
+    background: var(--White, #fff);
+  }
+  .form-select {
+    @extend .form-select;
+    height: 55px;
+    color: $color-text;
+    @media #{$max1399} {
+      height: 53px;
+    }
+    @media #{$max1199} {
+      height: 50px;
+    }
+    @media #{$max991} {
+      height: 48px;
+    }
+    @media #{$max767} {
+      height: 46px;
+    }
+    @media #{$max575} {
+      height: 42px;
+    }
+    &:focus {
+      border-color: $color-secoundary;
+      box-shadow: unset;
+    }
+    &::placeholder {
+      @media #{$max575} {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .form-control {
+    height: 55px;
+    border: 1px solid #e9e9e9;
+    @media #{$max1399} {
+      height: 53px;
+    }
+    @media #{$max1199} {
+      height: 50px;
+    }
+    @media #{$max991} {
+      height: 48px;
+    }
+    @media #{$max767} {
+      height: 46px;
+    }
+    @media #{$max575} {
+      height: 42px;
+    }
+    &:focus {
+      border-color: $color-secoundary;
+      box-shadow: unset;
+    }
+    &::placeholder {
+      color: #6b7483;
+      @media #{$max575} {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .ic-booking-text-area {
+    border: 1px solid $color-border;
+    border-radius: 6px;
+    padding: 20px;
+    min-height: 175px;
+    @media #{$max575} {
+      min-height: 100px;
+      padding: 10px;
+    }
+    &::placeholder {
+      @media #{$max575} {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+
+    &:focus {
+      border-color: $color-secoundary;
+    }
+  }
+}
+
+// booking form
+.ic-booking-form-wrap {
+  border-radius: 16px;
+  background: var(--White, #fff);
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  @media #{$max575} {
+    padding: 20px 10px;
+  }
+  .ic-title {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $color-border;
+    margin-bottom: 30px;
+
+    @media #{$max575} {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  .ic-form-btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e7e6e6;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+    .ic-btn-wrap {
+      display: flex;
+      gap: 30px;
+      @media #{$max575} {
+        gap: 5px;
+      }
+    }
+    .ic-btn {
+      height: 44px;
+      padding: 0px 20px;
+      border-radius: 8px;
+      font-weight: 500;
+      @media #{$max575} {
+        padding: 0px 10px;
+        font-size: 14px;
+        height: 42px;
+      }
+    }
+  }
+}

@@ -1,0 +1,228 @@
+/* ===============
+  inner banner
+  ==================
+*/
+.ic-inner-banner {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+
+  @media #{$max1399} {
+    padding: 90px 0;
+  }
+  @media #{$max1199} {
+    padding: 80px 0;
+  }
+  @media #{$max991} {
+    padding: 60px 0;
+  }
+  @media #{$max767} {
+    padding: 40px 0;
+  }
+  @media #{$max575} {
+    padding: 30px 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    opacity: 0.95;
+    background: linear-gradient(81deg, #217bfe 14.31%, #11ce8e 86.04%), #212529;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .ic-banner-content {
+    position: relative;
+    z-index: 9;
+    li:not(:first-child) {
+      color: black;
+    }
+  }
+}
+
+/* ===============
+  the event banner
+  ==================
+*/
+
+.ic-the-event-section {
+  .ic-img-box {
+    transform: rotateY(180deg);
+
+    @media #{$max991} {
+      text-align: center;
+    }
+  }
+
+  .ic-about-content-right {
+    margin-right: 80px;
+    position: relative;
+    margin-top: 0;
+
+    @media #{$max1650} {
+      margin-left: 0;
+      margin-right: 60px;
+    }
+    @media #{$max1399} {
+      margin-left: 0;
+      margin-right: 40px;
+    }
+    @media #{$max991} {
+      margin-left: 0;
+      margin-right: 0px;
+      margin-bottom: 40px;
+      padding: 0px 30px;
+    }
+    @media #{$max575} {
+      margin-left: 0;
+      margin-right: 0px;
+      margin-bottom: 20px;
+      padding: 0px 10px;
+    }
+
+    .about-shape-3 {
+      position: absolute;
+      bottom: 100px;
+      right: 50px;
+      animation: 4s linear 1s infinite alternate shape-move-3;
+
+      @media #{$max991} {
+        @keyframes shape-move-3 {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(20px);
+          }
+        }
+      }
+    }
+
+    .about-shape-2 {
+      animation: 16s linear infinite alternate shape-move;
+      @media #{$max991} {
+        @keyframes shape-move {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(20px);
+          }
+        }
+      }
+    }
+  }
+  .ic-about-content-wrap .ic-img-box .img-shape {
+    right: 24px;
+    @media #{$max767} {
+      margin-left: 0;
+      margin-right: 0px;
+      margin-bottom: 40px;
+      padding: 0px 30px;
+    }
+  }
+  .ic-about-big-img-wrap {
+    text-align: center;
+  }
+}
+
+/* ===============
+  the event banner
+  ==================
+*/
+.ic-join-event-section {
+  border-top: 1px solid var(--Border, #e7e6e6);
+}
+.ic-join-items-wrap {
+  .ic-join-item {
+    padding: 40px 32px;
+    text-align: center;
+    border-radius: 16px;
+    transition: all 0.3s;
+
+    @media #{$max1199} {
+      padding: 30px 20px;
+    }
+    p {
+      display: block;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .item-icon-box {
+      display: inline-flex;
+      width: 75px;
+      height: 75px;
+      padding: 18px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 16px;
+      border: 1px solid transparent;
+      transition: all 0.3s;
+      img {
+        transition: filter 0.3s all;
+      }
+    }
+    .booking-link {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      img {
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        img {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &:hover {
+      background: var(
+        --Gradiant-Shade,
+        linear-gradient(0deg, #fff 5%, #f5f5f5 100%)
+      );
+      .item-icon-box {
+        background: white;
+        &.icon-1 {
+          border-color: #11ce8e;
+          svg {
+            path {
+              fill: #11ce8e;
+            }
+          }
+        }
+        &.icon-2 {
+          border-color: $color-primary;
+          svg {
+            path {
+              fill: $color-primary;
+            }
+          }
+        }
+        &.icon-3 {
+          border-color: $color-orange;
+          svg {
+            path {
+              fill: $color-orange;
+            }
+          }
+        }
+      }
+      .booking-link {
+        img {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
